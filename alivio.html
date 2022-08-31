@@ -4,10 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="alivioJS/alivio.js"></script>
     <link href="AlivioCSS/alivio.css" rel="stylesheet" type="text/css">
+    <link href="AlivioCSS/header.css" rel="stylesheet" type="text/css">
     <title>Alivio</title>
 </head>
 <body>
-    
+    <header id="top_scroll">
+        <div class="container">
+            <div class="header">
+                <div class="top_inner">
+                    <a href="#">
+                        <img class="logo" src="img/Logo.png">
+                    </a>
+                    <nav class="menu">
+                        <a class="menu_link" href="#">Why Alivio</a>
+                        <a class="menu_link" href="#">Solutions</a>
+                        <a class="menu_link" href="#">Community</a>
+                        <a class="menu_link" href="#">Pricing</a>
+                    </nav>
+                </div>
+                <div class="reg">
+                    <a class="link_sign_in" href="#">Sign in</a>
+                    <a class="link_start_trial" href="javascript:PopUpShow()">Start Trial</a>
+                </div>
+                <div class="b-popup" id="popup1">
+                    <div class="b-popup-content">
+                        <h1 class="title register_text">Register</h1>
+
+                        <label for="name" class="register_text"><b>Name</b></label>
+                        <input class="register_input" type="text" placeholder="Enter Name" name="name" required>
+
+                        <label for="email" class="register_text"><b>Email</b></label>
+                        <input class="register_input" type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="psw" class="register_text"><b>Password</b></label>
+                        <input class="register_input" type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw-repeat" class="register_text"><b>Repeat Password</b></label>
+                        <input class="register_input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                        <hr>
+
+                        <div class="buttons">
+                            <a class="register_button" href="#">Register</a>
+                            <a class="register_button" href="javascript:PopUpHide()">Close</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
