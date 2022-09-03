@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
     <script type="text/javascript" src="alivioJS/alivio.js"></script>
-    <link href="AlivioCSS/alivio.css" rel="stylesheet" type="text/css">
-    <link href="AlivioCSS/header.css" rel="stylesheet" type="text/css">
+    <link href="alivioCSS/alivio.css" rel="stylesheet" type="text/css">
+    <link href="alivioCSS/adaptive.alivio.css" rel="stylesheet" type="text/css">
     <title>Alivio</title>
 </head>
 <body>
+
     <header id="top_scroll">
         <div class="container">
             <div class="header">
@@ -29,33 +32,134 @@
                 <div class="reg">
                     <a class="link_sign_in" href="#">Sign in</a>
                     <a class="link_start_trial" href="javascript:PopUpShow()">Start Trial</a>
+                    <button class="menu_button">
+                        <img class="menu_img" src="img/menu-button-icon.png">
+                    </button>
                 </div>
-                <div class="b-popup" id="popup1">
-                    <div class="b-popup-content">
-                        <h1 class="title register_text">Register</h1>
+            </div>
+        </div>
+        <div class="register" id="popup1">
+            <div class="register-content">
+                <h1 class="register_title register_text">Register</h1>
 
-                        <label for="name" class="register_text"><b>Name</b></label>
-                        <input class="register_input" type="text" placeholder="Enter Name" name="name" required>
+                <label for="name" class="register_text"><b>Name</b></label>
+                <input class="register_input" type="text" placeholder="Enter Name" name="name" required>
 
-                        <label for="email" class="register_text"><b>Email</b></label>
-                        <input class="register_input" type="text" placeholder="Enter Email" name="email" required>
+                <label for="email" class="register_text"><b>Email</b></label>
+                <input class="register_input" type="text" placeholder="Enter Email" name="email" required>
 
-                        <label for="psw" class="register_text"><b>Password</b></label>
-                        <input class="register_input" type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw" class="register_text"><b>Password</b></label>
+                <input class="register_input" type="password" placeholder="Enter Password" name="psw" required>
 
-                        <label for="psw-repeat" class="register_text"><b>Repeat Password</b></label>
-                        <input class="register_input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                        <hr>
+                <label for="psw-repeat" class="register_text"><b>Repeat Password</b></label>
+                <input class="register_input" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <hr>
 
-                        <div class="buttons">
-                            <a class="register_button" href="#">Register</a>
-                            <a class="register_button" href="javascript:PopUpHide()">Close</a>
-                        </div>
-                      </div>
+                <div class="buttons">
+                    <a class="button register_button" href="#">Register</a>
+                    <a class="button close_button" href="javascript:PopUpHide()">Close</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="top">
+        <div class="intro">
+            <div class="find_way">
+                <div class="container">
+                    <div class="fw">
+                        <p class="manage">Be aware, Manage well.</p>
+                        <p class="experiences">Everyone experiences stress in different ways.
+                           Let Alivio guide you, in a personalized journal experience, to overcome your stress.
+                        </p>
+                        <a class="your_way_btn" href="#">Find Your Way</a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+
+    <section class="content_work">
+        <div class="container">
+            <div class="how_it_works">
+                <div class="title1">
+                    <p class="works">How it works</p>
+                    <p class="understand">Understand & Release the stress in 3 steps</p>
+                </div>
+                <div class="desc1">
+                    <p class="offers">Alivio offers as many journals it takes, tackling different areas such as anxiety,
+                        overwhelmedness, sadness, or anger, and a variety of personal causes, to help you become
+                        aware of your emotions, and guide you in how to manage stress.</p>
+                </div>
+            </div>
+            <div class="steps">
+                <div class="personalize_1">
+                    <img class="steps_img" src="img/personalize.png">
+                    <p class="desc">Answer a quick survey about how you express yourself, what causes you stress,
+                        and what area would you like to work on. This way, we can fully personalize your journal!</p>
+                    <img class="steps_img2" src="img/personalize_img.png">
+                </div>
+                <div class="write_2">
+                    <img class="steps_img" src="img/write.png">
+                    <p class="desc">Write, draw, reflect, understand.
+                        Alivio will guide you through the prompts and will help you manage your stress!</p>
+                    <img class="steps_img2" src="img/write_img.png">
+                </div>
+                <div class="alivio_3">
+                    <img class="steps_img" src="img/alivio.png">
+                    <p class="desc">Write, draw, reflect, understand.
+                        Alivio will guide you through the prompts and will help you manage your stress!</p>
+                    <img class="steps_img2" src="img/alivio_img.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content_story">
+        <div class="story_container">
+            <div class="story">
+                <p class="story_title">Let's hear about Kayla's success story</p>
+                <p class="story_desc">See how well Alivio works in a real customer’s life.</p>
+                <a class="story_button" href="#">Let’s get started</a>
+            </div>
+                <video width="695" controls class="video video-js vjs-theme-forest" id="video-1" style="border: 1px solid none; border-radius: 16px;">
+                    <source src="img/video.mp4" type="video/mp4"></source>
+                </video>
+        </div>
+    </section>
+
+    <section class="content_product">
+        <div class="product_container">
+            <div class="product_image">
+                <img class="product_img" src="img/product_img.png">
+                <img class="product_card" src="img/product_card_img.png">
+            </div>
+            <div class="product_desc">
+                <p class="product_desc_title">Our product</p>
+                <p class="proguct_desc_stress">You tell us your stress,
+                    We make your diary</p>
+                <p class="product_desc_experiences">Everyone experiences it, and in different ways.
+                    Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
+                <a class="product_your_way_btn" href="#">Find Your Way</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_info">
+                <a class="alivio">Alivio</a>
+                <a class="info" href="#">Why Alivio</a>
+                <a class="info" href="#">Solutions</a>
+                <a class="info" href="#">Community</a>
+                <a class="info" href="#">Pricing</a>
+            </div>
+        </div>
+    </footer>
+
+	<script src="alivioJS/videoJS/video.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.1/lang/ru.min.js"></script>
+	<script src="alivioJS/videoJS/script.js"></script>
 </body>
 </html>
